@@ -1,0 +1,146 @@
+
+<html>
+<head>
+    <style>
+   h4 {
+    background: black; 
+    color: white; 
+   }
+    input[type=text].error {
+    border:1px solid red;
+}
+      @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body { background:rgb(30,30,40); }
+form { max-width:420px; margin:50px auto; }
+
+.feedback-input {
+  color:white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #CC6666;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #CC4949; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:#CC6666;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#CC4949; }
+  </style>
+
+    
+    <script src="js/prefixfree.min.js"></script>
+    
+    
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>1 модель</title>
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Abel|Satisfy' rel='stylesheet' type='text/css' />
+<link href="static/style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header-wrapper">
+		<div id="header" class="container">
+			<div id="logo">
+                <h1>Emotion detect</h1>
+			</div>
+			<div id="menu">
+				<ul>
+					<li><a href="{{ url_for('starting') }}">О проекте</a></li>
+					<li class="current_page_item"><a href="{{ url_for('index_page') }}">Модель 1</a></li>
+					<li><a href="{{ url_for('modelling_2') }}">Модель 2</a></li>
+                    <li><a href="{{ url_for('modelling_3') }}">Модель 3</a></li>
+                    <li><a href="{{ url_for('modelling_4') }}">Модель 4</a></li>
+				</ul>
+			</div>
+		</div>
+        
+        <div id="featured-content">
+		<div class="post">
+			<h2 class="title">Модель: Линейная регрессия</h2>
+			<div class="entry">
+                Линейная регрессия - это метод, позволяющий предсказывать значения некой функции от n переменных (в нашем случае в роли n выступает количество слов русского языка). Из преймуществ можно отметить:</p>
+
+                1) Гибкость метода в выборе меры расстояний между точками обучающей выборки (Евклидово, косинусное и другие).
+
+                <p>2) ... и выборе объектов, которым присваиваются веса (к примеру, в нашем случае можно брать n-граммы слов)</p>
+
+                <p>3) Обучение модели на новой тестовой выборке займёт мало времени: получив пару тысяч новых отзывов можно обучить программу на "обновлённой выборке" за буквально 20-секундный рестарт сервера.</p>
+
+                <p>4) Возможность предсказания, зная, что не все значения переменных присутствуют в обучающей выборке (среди отзывов тестовой выборки есть не все слова русского языка)</p>
+
+                <p>Из этого можно сделать вывод, что линейна регрессия - это довольно мощный и универсальный метод для решения задач различной сложности в разных сферах ншей жизни </p>
+			</div>
+		</div>
+        </div>
+    </div>
+	
+    
+	
+	<!-- end #page -->
+
+                
+            
+	</div>
+<div id="featured-content">
+		<div id="column_l">
+            <h2>Свой пример отзыва о банке</h2>
+						<form action="{{ url_for('index_page') }}" method=post>
+                
+                 
+  <textarea name="text" class="feedback-input" placeholder={{user_recall}}></textarea>
+  <input name="rating" type="submit"  value="Оценить">
+                           
+                     <script src="js/index.js"></script>
+                    
+            </form>
+            <p align="center">Оценка: {{rate}}</p>
+    </div>
+		<div id="column_r">
+			<h2>Случайные отзывы</h2>
+			<div class="post">
+                <form action="{{ url_for('index_page') }}" method=post>
+            <input name="generate" type="submit"  value="Сгенерировать"/>
+                </form>
+                <p>{{random_comment}}</p>
+                     </div>
+        </div>
+    </div>
+
+<div id="footer">
+	<p>&copy; 1 команда Big Data(проект: эмоциональная окраска отзывов). All rights reserved.</p>
+</div>
+</body>
+</html>

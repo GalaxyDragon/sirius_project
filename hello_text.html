@@ -1,0 +1,7 @@
+<!doctype html>
+<title>Sentiment Demo</title>
+Введите текст отзыва: <br>
+<form action="{{ url_for('index_page') }}" method=post>
+	<textarea autofocus name=text rows=10 cols=50>{{ text }}</textarea>
+	<input type=submit value="Check">
+</form>

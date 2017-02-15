@@ -1,0 +1,89 @@
+
+<html>
+<head>
+    <style>
+   h4 {
+    background: black; 
+    color: white; 
+   }
+  </style>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Эмоциональная окраска отзывов</title>
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Abel|Satisfy' rel='stylesheet' type='text/css' />
+<link href="../static/style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header-wrapper">
+		<div id="header" class="container">
+			<div id="logo">
+                <h1>Emotion detect</h1>
+			</div>
+			<div id="menu">
+				<ul>
+					<li class="current_page_item"><a href="{{ url_for('starting') }}">О проекте</a></li>
+					<li><a href="{{ url_for('index_page') }}">Модель 1</a></li>
+					<li><a href="{{ url_for('modelling_2') }}">Модель 2</a></li>
+					<li><a href="{{ url_for('modelling_3') }}">Модель 3</a></li>
+					<li><a href="{{ url_for('modelling_4') }}">Модель 4</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="banner">
+			<div class="content">
+				<div><img src="../static/images/code.jpg" width="1000" height="400" alt="" /></div>
+			</div>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="page">
+		<div class="post">
+			<h2 class="title"><a href="#">О проекте</a></h2>
+			<div class="entry">
+				<p>Целью нашего проекта - создание алгоритма, который с наибольшей точностью определяет эмоциональную окраску отзыва.</p>
+                <p>Это нужно, например, маркетологам, чтобы оценить правильность их стратегии на примере интернет - пользователей (какой резонанс вызывает товар в интернете - положительный или отрицательный).</p>
+                <p>Для тестирования нашей программы Вы можете перейти в одну из частей сайта, где можно будет выбрать способ тестирования: самому написать отзыв или загрузить случайный отзыв с сайта <a href="http://banki.ru">banki.ru.</a></p>
+
+			</div>
+		</div>
+	</div>
+	<!-- end #page --> 
+	<div id="featured-content">
+		<div id="column1">
+			<h2>Филипп</h2>
+			<p><img src="../static/images/programer.png" width="256" height="256" alt="" /></p>
+			<p>Занимался разработкой второй модели.</p>
+		</div>
+		<div id="column2">
+			<h2>Илья</h2>
+			<p><img src="../static/images/programer.png" width="256" height="256" alt="" /></p>
+			<p>Занимался разработкой третьей модели</p>
+		</div>
+		<div id="column3">
+			<h2>Леша</h2>
+			<p><img src="../static/images/programer.png" width="256" height="256" alt="" /></p>
+			<p>Занимался разработкой первой модели и сайта</p>
+		</div>
+	</div>
+    <div id="featured-content">
+        <div id="column1">
+        <h2>Дима</h2>
+        <p><img src="../static/images/programer.png" width="256" height="256" alt="" /></p>
+            <p>Занимался подготовкой отзывов к анализу, а также разработкой первой модели и сайта</p>
+		</div>
+        <div id="column2">
+        <h2>Ален</h2>
+        <p><img src="../static/images/programer.png" width="256" height="256" alt="" /></p>
+            <p>Занимался разработкой четвертой модели и сайта.</p>
+		</div>
+    </div>    
+</div>
+
+<div id="footer">
+	<p>&copy; 1 комманда Big Data(проект: эмоциональная окраска отзывов). All rights reserved.</p>
+</div>
+</body>
+</html>
